@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://shinechn.pages.dev/"
 title = "Shine's Blog"
 description = "An area where to store my ideas and notes."
 
