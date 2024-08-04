@@ -1,0 +1,30 @@
+{% macro custom_render(content) %}
+{% set transformed_content = content | replace(pat="> ", sub="<div class='quote-card'>
+  <blockquote>") %}
+    {% set transformed_content = transformed_content | replace(pat="\n", sub="</blockquote>
+</div>\n", count=1) %}
+{% set transformed_content = transformed_content | replace(pat="- ", sub="<div class='bluet-list-card'>
+  <ul>
+    <li>") %}
+      {% set transformed_content = transformed_content | replace(pat="\n", sub="
+    </li>
+  </ul>
+</div>\n", count=1) %}
+{{ transformed_content | safe }}
+{% endmacro %}
+{% macro backlink(pages) %}
+{% if pages and pages | length >0 %}
+<section class="backlinks ">
+  <h3>{{ trans(key="label_backlinks",lang=lang) }} ({{ pages | length }})<a href="#backlinks" id="backlinks"
+      class="zola-anchor">🔗</a>
+  </h3>
+  <ul class="">
+    {% for page in pages %}
+    <li>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endmacro backlink %}

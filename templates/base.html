@@ -1,27 +1,48 @@
+{% import "macros.html" as macros %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <title>Shine</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ get_url(path='styles.css') }}" />
+  {% block title %}
+  {% endblock title %}
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml') }}">
+  {% block rss %}
+  {% endblock rss %}
 </head>
 
 <body>
-  <header>
-    <ul>
-      <li><a href="{% url 'home' %}">Home</a></li>
-      <li><a href="{% url 'blog' %}">Blog</a></li>
-      <li><a href="{% url 'about' %}">About</a></li>
-      <li><a href="{% url 'contact' %}">RSS</a></li>
-      <li><a href="{% url 'github' %}">GitHub</a></li>
-    </ul>
-  </header>
-  <section class="section">
-    <div class="container">
-      {% block content %}
-      {% endblock %}
+  <header class="header">
+    <div class="header__left">
+      <a href="/" class="header__link">Shine</a>
     </div>
-  </section>
+    <nav class="header__right">
+      <ul>
+        <li><a class="header__link" href="{{ get_url(path='@/posts/_index.md') }}">Blog</a></li>
+        <li><a class="header__link" href="{{ get_url(path='@/thoughts/index.md') }}">Thoughts</a></li>
+        <li><a class="header__link" href="{{ get_url(path='@/now.md') }}">Now</a></li>
+      </ul>
+    </nav>
+  </header>
+  {%block nav%}
+  {%endblock nav%}
+  <div class="container">
+    <main class="main">
+      {% block content %}
+      {% endblock content %}
+    </main>
+
+    {%block sidebar%}
+    <aside class="siderbar">
+    </aside>
+    {%endblock siderbar%}
+  </div>
+
+  {% block footer %}
+  {% endblock footer%}
 </body>
 
 </html>

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: white;
+  --bg-hover-color: #FEFAE0;
+  --hover-color: rgb(254, 243, 199);
+  --card-color: rgb(253, 242, 248);
+  --text-color: rgb(0 0 0 / 88%);
+  --muted-color: rgb(0 0 0 / 64%);
+  --divider-color: rgb(0 0 0 / 32%);
+  --quote-color: rgb(0 0 0 / 8%);
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  max-width: 55rem;
+  width: 100%;
+  padding: 0 0.5rem;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 2;
+}
+
+h2 {
+  border-bottom: 1px solid var(--muted-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+summary {
+  font-size: 1.2rem;
+  background-color: var(--bg-hover-color);
+  padding: 0 1rem;
+  max-width: 30rem;
+  border-radius: 2rem;
+}
+
+a {
+  color: var(--text-color);
+  margin: 0 2px;
+
+  &:hover {
+    background-color: var(--hover-color);
+  }
+}
+
+.header {
+  display: flex;
+  flex: row wrap;
+  width: 60%;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__right li {
+  display: inline-block;
+  margin-left: 2rem;
+  list-style: none;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+blockquote {
+  margin: 1rem 0;
+  /* position: relative; */
+  border-radius: 0.5rem;
+  background-color: var(--quote-color);
+  padding: 1rem;
+  font-size: 1.1rem;
+  /* border-top: 1px solid var(--divider-color); */
+}
+
+li {
+  list-style: inside;
+}
+
+.main .title {
+  padding-bottom: 1rem;
+}
+
+.main .subtitle {
+  font-size: 0.5em;
+  color: var(--muted-color);
+}
+
+.continer {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .body-zone {
+    grid-template-columns: 100%;
+    grid-template-areas: "main";
+    margin: 0;
+  }
+
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.card__content {
+  /* margin: 1rem 0; */
+  padding: 0 1rem;
+  border-radius: 1rem;
+
+  .card__title {
+    /* font-size: 1.5rem; */
+    /* padding-bottom: 1rem; */
+    border-bottom: hidden;
+  }
+
+  .card__date {
+    color: var(--muted-color);
+    /* padding-top: 1rem; */
+  }
+
+  &:hover {
+    background-color: var(--card-color);
+  }
+}
+
+.card

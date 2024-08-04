@@ -1,16 +1,51 @@
 # The URL the site will be built for
 base_url = "https://example.com"
+title = "Shine's Blog"
+description = "An area where to store my ideas and notes."
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+build_search_index = false
+
+# default_language = ""
+
+
+# When set to "true", a feed is automatically generated.
+generate_feeds = true
+
+# There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
+feed_filenames = ["rss.xml"]
+
+# The number of articles to include in the feed. All items are included if
+# this limit is not set (the default).
+feed_limit = 7
+
+taxonomies = [
+  { name = "tags", feed = true },
+  { name = "categroies", feed = true },
+]
 
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = true
+# Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
+render_emoji = true
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = false
+# Whether to include the RFC3339 datetime of the page in the search index
+include_date = false
+# Whether to include the path of the page/section in the index (the permalink is always included)
+include_path = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+
 
 [extra]
 # Put all your custom variables here

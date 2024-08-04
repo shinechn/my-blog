@@ -1,10 +1,33 @@
 {% extends "base.html" %}
+{% block title %}
+<title>Home - {{ config.title }}</title>
+{% endblock title %}
+
+{% block header %}
+
+{% endblock header %}
 
 {% block content %}
 
-<h1 class="title">
-  This is my blog made with Zola.
-</h1>
-<p><a href="{{ get_url(path='@/blog/_index.md') }}">Posts</a>.</p>
-
+{% set about_page = get_page(path="about/index.md") %}
+<div class="about-section">
+  {{ about_page.summary | safe }}
+</div>
+<details open>
+  <summary>
+    {{ config.title }}
+  </summary>
+  {% set section = get_section(path="posts/_index.md") %}
+  {% for page in section.pages %}
+  <div class="p-3">
+    {# <a href="{{ page.permalink | safe }}">{{ page.title }}</a> #}
+    <h2>{{ page.title }}</h2>
+    {{ page.content | safe}}
+  </div>
+  {% endfor %}
+</details>
 {% endblock content %}
+
+{% block aside %}
+
+{% endblock aside %}

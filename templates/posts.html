@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{# {% block content %}
+<h1 class="title">
+  {{ section.title }}
+</h1>
+<ul>
+  {% for page in section.pages %}
+  <div class="p-3"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></div>
+  {% endfor %}
+</ul>
+{% endblock content %} #}
+
+
+{% block content %}
+<h1>Blog</h1>
+{% for page in section.pages %}
+<div class="card">
+  <a class="card__link" href="{{ page.permalink }}">
+    <div class="card__content">
+      <h2 class="card__title">{{ page.title }}</h2>
+      <p>{{ page.summary | safe }}</p>
+      <p class="card__date">{{ page.date | date(format="%Y.%m.%d") }}</p>
+  </a>
+</div>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends "base.html" -%}
+
+{% block title -%}
+<meta name="title" content="{{ page.title }}" />
+{% endblock title -%}
+
+{% block header -%}
+{% block detail_meta -%}
+<header class="header post-header" id="overview">
+  {% block breadcrumbs -%}
+  <div class="pb">
+    <a href="{{ get_url(path='@/_index.md')}}">Home</a>
+    <span class="divider">&nbsp;&gt;&nbsp;</span>
+    <a href="{{ get_url(path='@long') }}">All catgories</a>
+    {% if page.taxonomies.categories %}
+    <span class="divider">&nbsp;&gt;&nbsp;</span>
+    <a class="category" href="{{ get_taxonomy_url(kind='')}}"></a>
+    {% endif %}
+  </div>
+  {%endblock breadcrumbs %}
+</header>
+{% endblock detail_meta -%}
+{% endblock header -%}
+
+{% block main -%}
+<main>
+  {{ page.content}}
+</main>
+{% endblock main -%}
