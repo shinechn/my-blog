@@ -13,15 +13,17 @@
 
 
 {% block content %}
-<h1>Blog</h1>
-{% for page in section.pages %}
-<div class="card">
-  <a class="card__link" href="{{ page.permalink }}">
-    <div class="card__content">
-      <h2 class="card__title">{{ page.title }}</h2>
-      <p>{{ page.summary | safe }}</p>
-      <p class="card__date">{{ page.date | date(format="%Y.%m.%d") }}</p>
-  </a>
+<div posts>
+  {% for page in section.pages %}
+  <div class="post">
+    <a class="card__link" href="{{ page.permalink }}">
+      <div class="card__content">
+        <h2 class="card__title">{{ page.title }}</h2>
+        <p>{{ page.summary | safe }}</p>
+        <p class="meta_date">{{ page.date | date(format="%Y.%m.%d") }}</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
 </div>
-{% endfor %}
 {% endblock content %}

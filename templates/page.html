@@ -9,10 +9,11 @@
   {{ page.title }}
 </h1>
 {{ page.content | safe }}
-<p class="page_meta">
-  发布于: <span>{{ page.date }}</span>
+<p class="page_meta meta_date">
   {% if page.updated %}
-  最后更新时间: <span>{{ page.updated }}</span>
+  Updated on <span>{{ page.updated | date(format="%B %-d, %Y") }}</span>
+  {% elif page.date %}
+  Posted on <span>{{ page.date| date(format="%B %-d, %Y") }}</span>
   {% endif %}
 </p>
 {% endblock content %}
