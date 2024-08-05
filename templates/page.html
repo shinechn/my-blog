@@ -4,7 +4,20 @@
 <meta name="title" content="{{ page.title }}" />
 {% endblock title -%}
 
-{% block header -%}
+{% block content %}
+<h1 class="title">
+  {{ page.title }}
+</h1>
+{{ page.content | safe }}
+<p class="page_meta">
+  发布于: <span>{{ page.date }}</span>
+  {% if page.updated %}
+  最后更新时间: <span>{{ page.updated }}</span>
+  {% endif %}
+</p>
+{% endblock content %}
+
+{# {% block header -%}
 {% block detail_meta -%}
 <header class="header post-header" id="overview">
   {% block breadcrumbs -%}
@@ -20,10 +33,4 @@
   {%endblock breadcrumbs %}
 </header>
 {% endblock detail_meta -%}
-{% endblock header -%}
-
-{% block main -%}
-<main>
-  {{ page.content}}
-</main>
-{% endblock main -%}
+{% endblock header -%} #}

@@ -3,9 +3,6 @@
 <title>Home - {{ config.title }}</title>
 {% endblock title %}
 
-{% block header %}
-
-{% endblock header %}
 
 {% block content %}
 
@@ -29,5 +26,5 @@
 {% endblock content %}
 
 {% block aside %}
-
+{% set page = get_page(path="link.md") %}
 {% endblock aside %}

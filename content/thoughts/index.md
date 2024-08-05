@@ -1,6 +1,7 @@
 ---
 title: Thoughts
-template: "thoughts.html"
+date: 2023-05-01
+updated: 2024-08-05
 ---
 
 >  life like a game, 焦虑产生于, 你处于某项任务中, 你会担心任务失败, 担心没有及时找到存档点, 比如对于有移民打算的人来说, 拿到 permanent residence 就是一个存档点. 不同玩家即便玩同一款游戏, 游戏体验也是非常不同的, 去追求最大的游戏体验, 去尽快找到存档点.

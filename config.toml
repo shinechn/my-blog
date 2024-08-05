@@ -20,11 +20,11 @@ feed_filenames = ["rss.xml"]
 
 # The number of articles to include in the feed. All items are included if
 # this limit is not set (the default).
-feed_limit = 7
+feed_limit = 20
 
 taxonomies = [
-  { name = "tags", feed = true },
-  { name = "categroies", feed = true },
+  { name = "tags", feed = false },
+  { name = "categroies", feed = false },
 ]
 
 [markdown]

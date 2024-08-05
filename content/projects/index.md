@@ -1,6 +1,5 @@
 ---
 title: "Projects "
-template: "thoughts.html"
 ---
 
 >  **my-blog** 
