@@ -68,7 +68,7 @@ nav ul li {
   margin: 0 2rem;
 }
 
-.header__link {
+.header__link a {
   text-decoration: none;
 }
 

@@ -49,3 +49,4 @@ include_content = true
 
 [extra]
 # Put all your custom variables here
+favicon = "favicon.ico"
