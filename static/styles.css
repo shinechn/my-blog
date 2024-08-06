@@ -30,9 +30,9 @@ body {
 }
 
 h2 {
-  border-bottom: 1px solid var(--muted-color);
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  border-bottom: 1px solid var(--quote-color);
+  margin: 1rem 0;
+  font-size: 1.5rem;
 }
 
 h3 {
@@ -45,6 +45,7 @@ summary {
   padding: 0 1rem;
   max-width: 30rem;
   border-radius: 2rem;
+  cursor: pointer;
 }
 
 a {
@@ -60,12 +61,19 @@ nav ul {
   display: flex;
   font-weight: 600;
   justify-content: flex-end;
-  margin: 1rem;
+  padding: 1rem;
 }
 
 nav ul li {
   list-style: none;
   margin: 0 2rem;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--bg-color);
 }
 
 .header__link a {
@@ -80,8 +88,10 @@ blockquote {
   font-size: 1.1rem;
 }
 
-li {
-  list-style: inside;
+ul,
+ol {
+  /* list-style: inside; */
+  padding-left: 2ch;
 }
 
 .main .title {
@@ -105,12 +115,14 @@ li {
     border-bottom: hidden;
   }
 
-  .meta_date {
-    color: var(--muted-color);
-    /* padding-top: 1rem; */
-  }
-
   &:hover {
     background-color: var(--card-color);
   }
+}
+
+.meta_date {
+  color: var(--devider-color);
+  font-size: 1rem;
+  /* font-weight: 600; */
+  /* padding-top: 1rem; */
 }

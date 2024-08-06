@@ -6,4 +6,16 @@ title: "Projects "
 >
 >  基于 zola 构建的个人blog.
 >
->  [GitHub](
+>  `HTML`  `CSS`  `Zola` 
+>
+>  [GitHub]    [Website]
+
+
+
+> **my-resume**
+>
+> 构建个人简历
+>
+> `HTML`  `CSS`  
+>
+> [Github]

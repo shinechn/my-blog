@@ -9,11 +9,15 @@
   {{ page.title }}
 </h1>
 {{ page.content | safe }}
-<p class="page_meta meta_date">
+<p class="meta_date">
   {% if page.updated %}
-  Updated on <span>{{ page.updated | date(format="%B %-d, %Y") }}</span>
+  <span>
+    Updated on {{ page.updated | date(format="%B %-d, %Y") }}
+  </span>
   {% elif page.date %}
-  Posted on <span>{{ page.date| date(format="%B %-d, %Y") }}</span>
+  <span>
+    Posted on {{ page.date| date(format="%B %-d, %Y") }}
+  </span>
   {% endif %}
 </p>
 {% endblock content %}
