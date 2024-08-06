@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}
-<title>Home - {{ config.title }}</title>
+<title>{{ config.title }}</title>
 {% endblock title %}
 
 
@@ -10,23 +10,20 @@
 <div class="about-section">
   {{ about_page.summary | safe }}
 </div>
+
 <details open>
-  <summary>
-    {{ config.title }}
-  </summary>
+  <summary>2024 Posts</summary>
   {% set section = get_section(path="posts/_index.md") %}
   {% for page in section.pages %}
   <div class="p-3">
-    <li>
-      <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
-      <span class="meta_date">
-        {% if page.updated %}
-        Updated on {{ page.updated | date(format="%B %-d, %Y") }}
-        {% elif page.date %}
-        Posted on {{ page.date| date(format="%B %-d, %Y") }}
-        {% endif %}
-      </span>
-    </li>
+    <span class="meta_date">
+      {% if page.updated %}
+      {{ page.updated | date(format="%Y-%m-%d") }}
+      {% elif page.date %}
+      {{ page.date| date(format="%Y-%m-%d") }}
+      {% endif %}
+    </span>
+    <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
     {# <h2>{{ page.title }}</h2> #}
     {# {{ page.content | safe}} #}
   </div>

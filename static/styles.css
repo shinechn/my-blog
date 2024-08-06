@@ -29,6 +29,8 @@ body {
   line-height: 2;
 }
 
+
+
 h2 {
   border-bottom: 1px solid var(--quote-color);
   margin: 1rem 0;
@@ -125,4 +127,25 @@ ol {
   font-size: 1rem;
   /* font-weight: 600; */
   /* padding-top: 1rem; */
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding-bottom: 5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 2ch;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }

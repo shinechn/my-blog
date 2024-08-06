@@ -1,6 +1,6 @@
-# The URL the site will be built for
-base_url = "https://shinechn.pages.dev/"
-title = "Shine's Blog"
+title = "Shine's Blog" # The URL the site will be built for
+# base_url = "https://shinechn.pages.dev/"
+base_url = "http://127.0.0.1:1111/"
 description = "An area where to store my ideas and notes."
 
 # Whether to automatically compile all Sass files in the sass directory
@@ -9,9 +9,9 @@ compile_sass = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-# default_language = ""
+default_language = "zh"
 
-
+theme = "hook"
 # When set to "true", a feed is automatically generated.
 generate_feeds = true
 
@@ -49,4 +49,3 @@ include_content = true
 
 [extra]
 # Put all your custom variables here
-favicon = "favicon.ico"
