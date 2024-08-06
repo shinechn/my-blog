@@ -15,6 +15,7 @@
   --muted-color: rgb(0 0 0 / 64%);
   --divider-color: rgb(0 0 0 / 32%);
   --quote-color: rgb(0 0 0 / 8%);
+  --time-color: #718096
 }
 
 body {
@@ -46,8 +47,12 @@ summary {
   background-color: var(--bg-hover-color);
   padding: 0 1rem;
   max-width: 30rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   cursor: pointer;
+}
+
+.post-list {
+  padding-left: 1em;
 }
 
 a {
@@ -87,7 +92,7 @@ blockquote {
   border-radius: 0.5rem;
   background-color: var(--quote-color);
   padding: 1rem;
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
 }
 
 ul,
@@ -123,8 +128,8 @@ ol {
 }
 
 .meta_date {
-  color: var(--devider-color);
-  font-size: 1rem;
+  color: var(--time-color);
+  /* font-size: 1rem; */
   /* font-weight: 600; */
   /* padding-top: 1rem; */
 }
