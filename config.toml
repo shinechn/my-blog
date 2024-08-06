@@ -11,7 +11,7 @@ build_search_index = false
 
 default_language = "zh"
 
-theme = "hook"
+# theme = "hook"
 # When set to "true", a feed is automatically generated.
 generate_feeds = true
 
