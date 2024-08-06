@@ -1,6 +1,6 @@
-title = "Shine's Blog" # The URL the site will be built for
-# base_url = "https://shinechn.pages.dev/"
-base_url = "http://127.0.0.1:1111/"
+# The URL the site will be built for
+title = "Shine's Blog"
+base_url = "https://shinechn.pages.dev/"
 description = "An area where to store my ideas and notes."
 
 # Whether to automatically compile all Sass files in the sass directory
