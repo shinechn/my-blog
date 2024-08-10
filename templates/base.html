@@ -8,8 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ get_url(path='styles.css') }}" />
   <link rel="icon" type="image/ico" sizes="32x32" href="{{ get_url(path='favicon-32x32.png') }}">
-  {% block title %}
-  {% endblock title %}
+  <title>
+    {% block title %}{{ config.title }}{% endblock title %}
+  </title>
   {% block rss %}
   {#
   <link rel="alternate" type="application/rss+xml" title="RSS"

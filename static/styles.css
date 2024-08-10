@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-* {
+/* reset */
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 :root {
-  --bg-color: white;
+  --bgcolor: white;
   --bg-hover-color: #FEFAE0;
   --hover-color: rgb(254, 243, 199);
   --card-color: rgb(253, 242, 248);
@@ -15,9 +23,25 @@
   --muted-color: rgb(0 0 0 / 64%);
   --divider-color: rgb(0 0 0 / 32%);
   --quote-color: rgb(0 0 0 / 8%);
-  --time-color: #718096
+  --time-color: #718096;
+  --borders: 1px solid var(--divider-color);
 }
 
+/* utilities */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* styles */
 body {
   font-family: sans-serif;
   font-size: 1rem;
@@ -25,7 +49,7 @@ body {
   width: 100%;
   padding: 0 0.5rem;
   margin: 0 auto;
-  background-color: var(--bg-color);
+  background-color: var(--bgcolor);
   color: var(--text-color);
   line-height: 2;
 }
@@ -55,8 +79,7 @@ summary {
   padding-left: 1em;
 }
 
-/* a[href^="http://127.0.0.1:1111"] { */
-a[href^="https://shinechn.pages.dev"] {
+a {
   color: var(--text-color);
   margin: 0 2px;
 
@@ -65,9 +88,8 @@ a[href^="https://shinechn.pages.dev"] {
   }
 }
 
-/* a:not([href^="http://127.0.0.1:1111"]):after { */
-a:not([href^="https://shinechn.pages.dev"])::after {
-  content: "\1F855";
+a[href^="https://github.com"]::before {
+  content: url('github_git_icon_145985.svg');
 }
 
 nav ul {
@@ -86,7 +108,7 @@ nav ul li {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: var(--bg-color);
+  background-color: var(--bgcolor);
 }
 
 .header__link a {
