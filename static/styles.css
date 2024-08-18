@@ -55,6 +55,7 @@ body {
   padding: 0 5vw;
   margin: 0 auto;
   line-height: 2;
+  padding-bottom: 4rem;
 }
 
 h2 {
@@ -146,6 +147,7 @@ ol {
   }
 }
 
+.post_date,
 .meta_date {
   color: var(--time-color);
   /* font-size: 1rem; */
