@@ -13,7 +13,7 @@
 </div>
 
 <details open>
-  <summary>2024 Posts</summary>
+  <summary>Sort by time</summary>
   {% set section = get_section(path="posts/_index.md") %}
   {% for page in section.pages %}
   <div class="post-list">
@@ -38,7 +38,9 @@
 
 {% block footer %}
 <footer>
-  <p>© 2024</p>
-  <p>Powered by <a href="https://github.com/getzola/zola">Zola</a></p>
+  <p>© 2024 <span>Powered by
+      <a href="https://github.com/getzola/zola">Zola</a>
+    </span>
+  </p>
 </footer>
 {% endblock footer %}

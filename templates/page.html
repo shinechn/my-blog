@@ -27,9 +27,18 @@
 {% endblock content %}
 
 {% block footer %}
-<p class="space">
-  <a href="{{ config.base_url }}">cd ..</a>
-</p>
+<footer class="footer">
+  <ul>
+    {% if page.maston %}
+    <li> comment on
+      <a href={{page.maston}}>maston</a>
+    </li>
+    {% endif %}
+    <li>
+      <a href="{{ config.base_url }}"> Back to Home</a>
+    </li>
+  </ul>
+</footer>
 {% endblock footer %}
 
 {# {% block header -%}

@@ -1,6 +1,7 @@
 ---
 title: OpenWrt 个人家庭服务器
 date: 2024-07-13
+maston: 'https://mas.to/@coool'
 ---
 What's OpenWrt?
 
