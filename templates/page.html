@@ -4,31 +4,33 @@
 {{ page.title }}
 {% endblock title -%}
 
-{% block header %}
-<header class="space">
-  <a href="{{ config.base_url }}">&LeftArrow; Home</a>
-</header>
-{% endblock header %}
-
 {% block content %}
 <main>
   <h1 class="title">
     {{ page.title }}
   </h1>
-  {{ page.content | safe }}
-  <p class="meta_date">
+  <p class="post_date">
     {% if page.updated %}
     <span>
-      Updated on {{ page.updated | date(format="%B %-d, %Y") }}
+      {{ page.updated | date(format="%B %-d, %Y") }}
     </span>
     {% elif page.date %}
     <span>
-      Posted on {{ page.date| date(format="%B %-d, %Y") }}
+      {{ page.date| date(format="%B %-d, %Y") }}
     </span>
     {% endif %}
   </p>
+
+  {{ page.content | safe }}
+
 </main>
 {% endblock content %}
+
+{% block footer %}
+<p class="space">
+  <a href="{{ config.base_url }}">cd ..</a>
+</p>
+{% endblock footer %}
 
 {# {% block header -%}
 {% block detail_meta -%}
